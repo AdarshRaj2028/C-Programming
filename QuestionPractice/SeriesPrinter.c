@@ -45,6 +45,19 @@ else{
 return sum;
 }
 
+int sum5(int e){
+    float sum = 1;
+    int fact;
+    for(int i = 1; i <= e; i++){
+        int fact = 1;
+        for(int j = i + 1; j >= 1; j--){
+        fact *= j;
+        }
+        sum += (float)i / fact;
+    }
+    return sum;
+}
+
 
 int main(){
     int z, a, b, c, d, e, f, g, h;
@@ -77,6 +90,9 @@ int main(){
             break;
 
             case 5:
+            printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
+            scanf("%d", &e);
+            printf("The Sum Upto %d terms: %f", e, sum5(e)); 
             break;
 
             case 6:
