@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 // Funtion 1
 int sum1(int a){
@@ -45,19 +46,62 @@ else{
 return sum;
 }
 
-int sum5(int e){
-    float sum = 1;
-    int fact;
-    for(int i = 1; i <= e; i++){
+// Function 5
+float sum5(int e){
+    float sum = 1.0;
+    for(int i = 1; i < e; i++){
         int fact = 1;
-        for(int j = i + 1; j >= 1; j--){
+        for(int j = 1; j <= i; j++){
         fact *= j;
         }
-        sum += (float)i / fact;
+        sum += (float)i / (fact*(i+1));
     }
     return sum;
 }
 
+// Function 6
+double sum6(int f){
+    double s, sum = 0;
+ for(int i = 1; i <= f; i++)
+ {
+    s = pow(i, i);
+    sum += s;
+ }
+ return sum;
+}
+
+// Function 7
+float factorial(int c){
+    float fact = 1;
+    for (int i = 1; i <= c; i++)
+    {
+       fact *= i;
+    }
+    return fact;
+}
+float sum7(int g){
+      float sum1 = 0, sum;
+    for (int i = 1; i <= g; i++)
+    {
+        sum1 = (factorial((2*i) - 1) + factorial(2*i))/i;
+        sum += sum1;
+    }
+    return sum;
+}
+
+// Function 8
+
+float sum8(int h){
+      int fact = 1;
+      float sum1 = 0, sum;
+      for (int i = 1; i <= h; i++)
+      {
+       fact *= i;
+       sum1 += fact;
+      }
+      sum = sum1 / h;
+      return sum;
+    }
 
 int main(){
     int z, a, b, c, d, e, f, g, h;
@@ -92,16 +136,25 @@ int main(){
             case 5:
             printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
             scanf("%d", &e);
-            printf("The Sum Upto %d terms: %f", e, sum5(e)); 
+            printf("The Sum Upto %d terms: %.2f", e, sum5(e)); 
             break;
 
             case 6:
+            printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
+            scanf("%d", &f);
+            printf("The Sum Upto %d terms: %.2lf", f, sum6(f)); 
             break;
 
             case 7:
+            printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
+            scanf("%d", &g);
+            printf("The Sum Upto %d terms: %.2f", g, sum7(g));
             break;
 
             case 8:
+            printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
+            scanf("%d", &h);
+            printf("The Sum Upto %d terms: %.2f", h, sum8(h));
             break;
 
 }
