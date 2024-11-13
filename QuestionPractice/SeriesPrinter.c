@@ -80,7 +80,7 @@ float factorial(int c){
     return fact;
 }
 float sum7(int g){
-      float sum1 = 0, sum;
+      float sum1 = 0, sum = 0;
     for (int i = 1; i <= g; i++)
     {
         sum1 = (factorial((2*i) - 1) + factorial(2*i))/i;
@@ -93,7 +93,7 @@ float sum7(int g){
 
 float sum8(int h){
       int fact = 1;
-      float sum1 = 0, sum;
+      float sum1 = 0, sum = 0;
       for (int i = 1; i <= h; i++)
       {
        fact *= i;
