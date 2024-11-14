@@ -8,7 +8,7 @@ STRCAT function is designed to concatenate two strings at a time.
 
 # strrev() -> This function is used to show reverse of a string.
 
-# strcpy() -> This function is used to show reverse of a string.
+# strcpy() -> This function is used to copy one string to another.
 
 # strcmp() -> This function is used to compare two given strings.
 
