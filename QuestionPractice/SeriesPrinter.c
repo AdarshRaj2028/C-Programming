@@ -157,6 +157,9 @@ int main(){
             printf("The Sum Upto %d terms: %.2f", h, sum8(h));
             break;
 
+            default: 
+            printf("Please enter the choices available.");
+            break;
 }
 return 0;
 }
