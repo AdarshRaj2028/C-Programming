@@ -6,6 +6,10 @@ STRCAT function is designed to concatenate two strings at a time.
 
 # strlen() -> This function is used to find the length of a given string.
 
+// The null terminator itself is not counted in the length returned by Strlen(), but it marks the end of the string in memory.
+// If string = "Hello", it returns 5.
+// But the actual memory for the string contains 6 elements: 'H', 'e', 'l', 'l', 'o', and '\0' (null terminator).
+
 # strrev() -> This function is used to show reverse of a string.
 
 # strcpy() -> This function is used to copy one string to another.
