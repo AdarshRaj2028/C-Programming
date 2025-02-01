@@ -60,6 +60,39 @@ void func4(int r, int c)
     }
 }
 
+
+void func5(int z)
+{
+    for (int i = 1; i <= z; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (j == 1 || j == i || i == z)
+            {
+                    printf("* ");
+            } 
+            else {
+                printf("  ");
+            }
+    }
+    printf("\n");
+    }
+}
+
+void func6(int z){
+    for (int i = 1; i <= z; i++) {
+        for (int j = i; j <= z; j++) {
+            if (j == z || j == i || i == 1) {
+                printf("* ");
+            } 
+            else {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     int user_input, input, input2;
@@ -67,6 +100,8 @@ int main()
     printf("Enter 2 to see Reversed Traingular star pattern\n");
     printf("Enter 3 to see Pyramid pattern\n");
     printf("Enter 4 to see Rectangle\\Square\n");
+    printf("Enter 5 to see Hollow Traingular star pattern\n");
+    printf("Enter 6 to see Hollow Reversed Traingular star pattern\n");
     printf("Enter your decision: ");
     scanf("%d", &user_input);
     switch (user_input)
@@ -97,8 +132,20 @@ int main()
         func4(input, input2);
         break;
 
+    case 5:
+        printf("Enter the number of rows: ");
+        scanf("%d", &input);
+        func5(input);
+        break;
+
+    case 6:
+        printf("Enter the number of rows: ");
+        scanf("%d", &input);
+        func6(input);
+        break;
+    
     default:
-        printf("Please enter input as 1 or 2 or 3 or 4.");
+        printf("Please enter input available.");
         break;
     }
     return 0;
