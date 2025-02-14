@@ -99,7 +99,7 @@ float sum8(int h){
        fact *= i;
        sum1 += fact;
       }
-      sum = sum1 / h;
+      sum = sum1 / factorial(h);
       return sum;
     }
 
@@ -154,7 +154,7 @@ int main(){
             case 8:
             printf("\nEnter the nth term, to see the result upto there from the series you have chosen: ");
             scanf("%d", &h);
-            printf("The Sum Upto %d terms: %.2f", h, sum8(h));
+            printf("The Sum Upto %d terms: %.4f", h, sum8(h));
             break;
 
             default: 
