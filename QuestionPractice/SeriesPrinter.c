@@ -13,10 +13,9 @@ return sum;
 // Function 2
 int sum2(int b){
 int sum = 0;
-for(int i = 1; i <= (2*b) - 1; i = i + 2){ 
-sum += i;
-// i++;
-}
+for(int i = 1; i <=((2*b)-1); i = i + 2){ 
+        sum += i;
+    }
 return sum;
 }
 
@@ -36,9 +35,9 @@ int sum4(int d){
 int sum = 0;
 int fact = 1;
 for(int i = 1; i <= d; i++){ 
-fact *= i;
+fact *= i;// fact = 1, 2, 6, 24, 120
 if (i % 2 == 0){
-   sum -= fact;
+   sum -= fact;// sum = sum - fact;
 }
 else{
     sum += fact;
@@ -48,13 +47,13 @@ return sum;
 
 // Function 5
 float sum5(int e){
-    float sum = 1.0;
+    float sum = 1.0; 
     for(int i = 1; i < e; i++){
         int fact = 1;
         for(int j = 1; j <= i; j++){
         fact *= j;
         }
-        sum += (float)i / (fact*(i+1));
+        sum +=(float) i / (fact*(i+1));
     }
     return sum;
 }
@@ -90,7 +89,6 @@ float sum7(int g){
 }
 
 // Function 8
-
 float sum8(int h){
       int fact = 1;
       float sum1 = 0, sum = 0;
