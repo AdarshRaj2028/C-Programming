@@ -82,10 +82,10 @@ float sum7(int g){
       float sum1 = 0, sum = 0;
     for (int i = 1; i <= g; i++)
     {
-        sum1 = (factorial((2*i) - 1) + factorial(2*i))/i;
-        sum += sum1;
+        sum1 += (factorial((2*i) - 1) + factorial(2*i))/i;
+        // sum += sum1;
     }
-    return sum;
+    return sum1;
 }
 
 // Function 8
