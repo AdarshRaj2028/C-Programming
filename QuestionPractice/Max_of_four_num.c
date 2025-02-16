@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// int max_of_four(int a, int b, int c, int d){
+// if (a > b && a > c && a > d){
+// return a;}
+// else if (b > c && b > d){
+// return b;}
+// else if (c > d){
+// return c;}
+// else {
+// return d;}
+// }
+
 int max_of_four(int a, int b, int c, int d){
-if (a > b && a > c && a > d){
-return a;}
-else if (b > c && b > d){
-return b;}
-else if (c > d){
-return c;}
-else {
-return d;}
+    (a > b && a > c && a > d) ?  a :  0;
+    (b > c && b > d) ?  b :  0; 
+    (c > d) ?  c :  0;
+    return d;
 }
 
 int main(){
@@ -25,12 +32,12 @@ printf("Enter your 4st number: ");
 scanf("%d", &d);
 int ans = max_of_four(a, b, c, d);
 printf("\n-> The Largest number among given values are: %d", ans);
-while(69){
+// while(69){
 printf("\nDo you want to run the program again?\n\n-> Enter '1' for Yes\n-> Enter '0' for No\n--> Enter your decision: ");
 scanf("%d", &choice);
-if ( choice == 1){
+if (choice == 1){
    system("cls");
-   break;
+//  break;
 }
 else if( choice == 0){
     printf("Thank you for using the program.\n");
@@ -39,7 +46,7 @@ else if( choice == 0){
 else{
     printf("\nInvalid choice. Please enter either '1' or '0'.\n");
 }
-}
+// }
 } while(1);
-// return 0;
+return 0;
 }
