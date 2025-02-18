@@ -70,16 +70,16 @@ double sum6(int f){
 }
 
 // Function 7
-float factorial(int c){
-    float fact = 1;
+double factorial(int c){
+    double fact = 1;
     for (int i = 1; i <= c; i++)
     {
        fact *= i;
     }
     return fact;
 }
-float sum7(int g){
-      float sum1 = 0, sum = 0;
+double sum7(int g){
+      double sum1 = 0, sum = 0;
     for (int i = 1; i <= g; i++)
     {
         sum1 += (factorial((2*i) - 1) + factorial(2*i))/i;
