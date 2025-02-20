@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 // Krishnamurthy number
 float factorial(int c)
@@ -22,11 +23,11 @@ void krishnamurthy(int a)
     }
     if (original == x)
     {
-        printf("The number is a Krishnamurthy number or Strong number.");
+        printf("The number is a Krishnamurthy number or Strong number.\n");
     }
     else
     {
-        printf("The number is not a Krishnamurthy number or Strong number.");
+        printf("The number is not a Krishnamurthy number or Strong number.\n");
     }
 }
 
@@ -43,11 +44,11 @@ void palindrome(int b)
     }
     if (sum == sd)
     {
-        printf("The number is palindrome in nature.");
+        printf("The number is palindrome in nature.\n");
     }
     else
     {
-        printf("The number is not palindrome in nature.");
+        printf("The number is not palindrome in nature.\n");
     }
 }
 
@@ -77,11 +78,11 @@ void armstrong(int c)
 
     if (sum == org)
     {
-        printf("The number entered is an Armgstrong number.");
+        printf("The number entered is an Armgstrong number.\n");
     }
     else
     {
-        printf("The number entered is not an Armgstrong number.");
+        printf("The number entered is not an Armgstrong number.\n");
     }
 }
 int squredigit(int z)
@@ -134,16 +135,16 @@ int happy(int d)
     }
     if (n == 1)
     {
-        printf("%d is a happy number.", d);
+        printf("%d is a happy number.\n", d);
     }
     else
     {
-        printf("%d is not a happy number.", d);
+        printf("%d is not a happy number.\n", d);
     }
 }
 
 // 5. Harshad number
-int harshad(int e)
+void harshad(int e)
 {
     int sum = 0, original, rem;
     original = e;
@@ -155,18 +156,37 @@ int harshad(int e)
     }
     if (original % sum == 0)
     {
-        printf("The number is a Harshad or Niven number.");
+        printf("The number is a Harshad or Niven number.\n");
     }
     else
     {
-        printf("The number is not a Harshad or Niven number.");
+        printf("The number is not a Harshad or Niven number.\n");
     }
+}
+
+void spy(int f){
+    int sum = 0, prod = 1, rem;
+    while (f != 0)
+    {
+        rem = f % 10;
+        sum += rem;
+        prod *= rem;
+        f = f / 10;
+    }
+    if(sum == prod){
+        printf("The number is Spy number.\n");
+    }
+     else{
+        printf("The number is not a Spy number.\n");
+     }
 }
 
 int main()
 {
-    int a, b, c, d, e, f, h, userinput;
-    printf("1. Krishnamurthy number\n2. Palindrome number\n3. Armstrong number\n4. Happy number\n5. Harshad number\n");
+    int a, b, c, d, e, f, userinput;
+    while(1){
+        system("cls");
+    printf("1. Krishnamurthy number\n2. Palindrome number\n3. Armstrong number\n4. Happy number\n5. Harshad number\n6. Spy number\n0. Exit\n");
     printf("Enter the type of number you want to check for your input number: ");
     scanf("%d", &userinput);
 
@@ -181,31 +201,43 @@ int main()
 
     case 2:
         printf("\nEnter the number you want to check: ");
-        scanf("%d", &b);
-        palindrome(b);
+        scanf("%d", &a);
+        palindrome(a);
         break;
 
     case 3:
         printf("\nEnter the number you want to check: ");
-        scanf("%d", &c);
-        armstrong(c);
+        scanf("%d", &a);
+        armstrong(a);
         break;
 
     case 4:
         printf("\nEnter the number you want to check: ");
-        scanf("%d", &c);
-        happy(c);
+        scanf("%d", &a);
+        happy(a);
         break;
 
     case 5:
         printf("\nEnter the number you want to check: ");
-        scanf("%d", &e);
-        harshad(e);
+        scanf("%d", &a);
+        harshad(a);
         break;
+
+    case 6:
+        printf("\nEnter the number you want to check: ");
+        scanf("%d", &a);
+        spy(a);
+        break;
+
+    case 0:
+       printf("Thank you for using the program.");
+       exit(1);
     
     default:
-        printf("Please enter from the available options.");
+        printf("Please enter from the available options.\n");
         break;
     }
+    system("pause");
+}
     return 0;
 }
