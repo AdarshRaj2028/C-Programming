@@ -6,7 +6,9 @@ Size of size_t, On a 64-bit system: It is typically 8 bytes (64 bits).
 -> To display the value of size_t, you need the correct format specifier:
 -> Use %zu for size_t. This ensures compatibility across platforms.
 
---> In C, when you pass an array to a function, it is passed as a pointer to the first element of the array. This means that the array itself is not copied, but rather the address of its first element is passed to the function. So, whether you pass an array or a pointer, they are essentially the same thing in C — they both represent memory addresses pointing to the location of the array elements.
+--> In C, when you pass an array to a function, it is passed as a pointer to the first element of the array.
+This means that the array itself is not copied, but rather the address of its first element is passed to the function. So, whether you pass an array or a pointer,
+they are essentially the same thing in C — they both represent memory addresses pointing to the location of the array elements.
 */
 
 #include <stdio.h>
