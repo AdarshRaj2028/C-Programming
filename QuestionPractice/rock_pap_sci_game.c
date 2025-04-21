@@ -22,14 +22,15 @@ So agar x = 10, toh function 0 se 9 tak random number dega.
 
 int generate_rand_num(int x)
 {
-    return (rand() % x) + 1;
+    return (rand() % x);
 }
 
 int main()
 {
-// Random seed — ek hi baar set karna hai, baar baar nahi
+    // Random seed — ek hi baar set karna hai, baar baar nahi
     srand(time(NULL)); // Call srand(time(NULL)); once at the beginning of main() instead of in the generate_rand_num() function.
     int comp_score = 0, user_score = 0, user_choice, prog_choice, play_again;
+    char *choice[] = {"Rock", "Paper", "Scissor"};
     printf("\n========== Welcome to Rock Paper Scissor Game ==========\n");
     printf("\nThere will be Three rounds in total.\n\n");
     for (int i = 0; i < 3; i++)
@@ -39,32 +40,10 @@ int main()
         scanf("%d", &user_choice);
         if (user_choice >= 1 && user_choice <= 3)
         {
-            if (user_choice == 1)
-            {
-                printf("\n--> You choosed Rock\n");
-            }
-            else if (user_choice == 2)
-            {
-                printf("\n--> You choosed Paper\n");
-            }
-            else if (user_choice == 3)
-            {
-                printf("\n--> You choosed Scissor\n");
-            }
+            user_choice -= 1;
+            printf("User choosed %s\n", choice[user_choice]);
             prog_choice = generate_rand_num(3);
-
-            if (prog_choice == 1)
-            {
-                printf("--> Computer choosed Rock\n");
-            }
-            else if (prog_choice == 2)
-            {
-                printf("--> Computer choosed Paper\n");
-            }
-            else if (prog_choice == 3)
-            {
-                printf("--> Computer choosed Scissor\n");
-            }
+            printf("Computer choosed %s\n", choice[prog_choice]);
 
             if (user_choice == prog_choice)
             {
