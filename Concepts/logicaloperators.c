@@ -12,25 +12,4 @@ int main()
     printf("%d\n",  a && b); // 0 represents  false in C
     printf("%d\n",  a || b); // 1 represents true in C
     return 0;
-
-    // Format Specifier(%d): It is a way to tell the compiler what type of data is in a variable
-// during taking input, displaying output to the user.
-// %: The percent sign is used to indicate the start of a format specifier.
-// d: The d character specifhat the value is a decimal(0-9) integer.eg:=1234
-// /*
-// Use a space before %c in scanf to make it ignore any leftover spaces or newlines from previous input,
-// so it only reads the next actual character you type.
-// Only in case of %c. Not Needed in other format specifiers like %d or %s or %f etc...
-// */
-
 }
-/*
-Escape Sequence:
-\n = New Line 
-\a = Alarm or Beep 
-\b = Backspace
-\t = Tab(Horizontal)
-\\ = Backslash
-\' = Single Quote
-\" = Double Quote
-*/
