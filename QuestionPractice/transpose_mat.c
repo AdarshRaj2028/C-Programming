@@ -38,9 +38,9 @@ int main()
 
     // FOR REVERSING THE MATRIX
     printf("\nThe reverse of matrix is:\n");
-    for (int i = rows - 1; i >= 0; i--)
+    for (int i = rows - 1; i >= 0; i--) // FOR INTERCHANGING ROWS 
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = columns - 1; j >= 0; j--) // FOR INTERCHANGING COLUMNS
         {
             printf("%d\t", matrix[i][j]);
         }
